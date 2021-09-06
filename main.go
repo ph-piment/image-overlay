@@ -10,11 +10,6 @@ import (
 	"os"
 )
 
-const (
-	SourceDir string = "source"
-	OutputDir string = "output"
-)
-
 func main() {
 	backgroundImage, err := getPngImageFromSourceFileName("background.png")
 	if err != nil {
