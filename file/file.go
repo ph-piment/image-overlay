@@ -10,7 +10,7 @@ const (
 )
 
 func GetSourceFilePath(fileName string) (path string, err error) {
-	path, err = filepath.Abs("./" + SourceDir + "/" + fileName)
+	path, err = filepath.Abs(filepath.Join(SourceDir, fileName))
 	if err != nil {
 		return "", err
 	}
@@ -18,7 +18,7 @@ func GetSourceFilePath(fileName string) (path string, err error) {
 }
 
 func GetOutputFilePath(fileName string) (path string, err error) {
-	path, err = filepath.Abs("./" + OutputDir + "/" + fileName)
+	path, err = filepath.Abs(filepath.Join(OutputDir, fileName))
 	if err != nil {
 		return "", err
 	}

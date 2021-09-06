@@ -63,7 +63,7 @@ func OverlayImage(pointType int, rgba *image.RGBA, i *image.Image) error {
 	return nil
 }
 
-func GetPngImage(path string) (i image.Image, err error) {
+func GetPngImage(path string) (image.Image, error) {
 	f, err := os.Open(path)
 	if err != nil {
 		return nil, err
